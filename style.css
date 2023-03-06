@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #4db2ec; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+
+    #c471ed,
+    #4db2ec
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+
+    #c471ed,
+    #4db2ec
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.warpper {
+  width: 485px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 30px 40px;
+}
+
+.warpper header {
+  font-weight: 500;
+  font-size: 33px;
+  text-align: center;
+  background: -webkit-linear-gradient(#c471ed, #4db2ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.warpper .captcha-area {
+  display: flex;
+  height: 65px;
+  margin: 30px 0 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.captcha-area .captcha-img {
+  height: 100%;
+  width: 345px;
+  user-select: none;
+  border-radius: 5px;
+  background: #000;
+  position: relative;
+}
+
+.captcha-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95;
+}
+
+.captcha-img .captcha {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: 10px;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 2px #a9a9a9;
+  font-family: "Noto Serif", serif;
+}
+
+.warpper button {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #4db2ec; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+
+    #c471ed,
+    #4db2ec
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+
+    #c471ed,
+    #4db2ec
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 5px;
+}
+
+.captcha-area .reload-btn {
+  width: 75px;
+  height: 100%;
+  font-size: 25px;
+}
+
+.captcha-area .reload-btn i {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.captcha-area .reload-btn:hover i {
+  transform: rotate(45deg);
+}
+.warpper .input-area {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+.input-area input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 20px;
+  font-size: 20px;
+  border: 3px solid #bfbfbf;
+}
+
+.input-area input:is(:focus, :valid) {
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #c471ed, #4db2ec) border-box;
+  border: 3px solid transparent;
+  border-radius: 5px;
+}
+
+.input-area .check-btn {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  height: 45px;
+  font-size: 17px;
+  padding: 0 20px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
+.input-area input:valid + .check-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.warpper .status-txt {
+  display: none;
+  font-size: 18px;
+  margin: 20px 0 -5px 0;
+  text-align: center;
+}
